@@ -13,6 +13,9 @@ pose = mp_pose.Pose(
     min_detection_confidence=0.5
 )
 
+@app.route('/')
+def home():
+    return 'Welcome to the render.com server'
 
 @app.route('/process_image', methods=['POST'])
 def process_image():
